@@ -2,46 +2,344 @@
 !----------------------- Обнуляющий стиль --------------------!
 */
 @import "_nullstyle";
+
 /*
 !---------------------- Подключения шрифта -------------------!
 */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap");
+@font-face {
+  font-family: "Objective-Bolt";
+  src: url("/fonts/objective/Objective-Bold.otf");
+}
+
+@font-face {
+  font-family: "Objective-Medium";
+  src: url("/fonts/objective/Objective-Medium.otf");
+}
+
+@font-face {
+  font-family: "Objective-Regular";
+  src: url("/fonts/objective/Objective-Regular.otf");
+}
+
+@font-face {
+  font-family: "Philosopher-Regular";
+  src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+}
+
 /*
 !----------------------  -------------------!
 */
-body{
-  font-family: Montserrat;
-  font-weight: 500;
+body {
+  font-family: "Objective-Medium";
   font-size: 18px;
+  overflow-x: hidden;
+  background: #E5E5E5;
 }
+
+.u-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 46.52px;
+}
+
 .header {
 
-  &__container {}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
 
   &__logo {}
 
-  &__menu {}
+  &__menu {
+    & ul {
+      display: flex;
+    }
+
+    & li {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
 }
 
 .u-container {}
 
+main {
+  margin-top: 91px;
+}
+
 .main {
 
-  &__container {}
+  &__container {
+    display: flex;
+    column-gap: 53px;
+    align-items: center;
+  }
 
-  &__container-left {}
+  &__container-left {
+    flex: 53%;
+    margin-top: 11px;
 
-  &__button {}
+    & h1 {
+      font-family: "Philosopher-Regular";
+      font-size: 50px;
+      line-height: 70px;
+      letter-spacing: 0.02em;
+      color: #260041;
+
+      & span {
+        color: #D81B60;
+      }
+    }
+
+    & p {
+      font-family: "Objective-Regular";
+      margin-top: 14px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 36px;
+      color: #260041;
+    }
+  }
+
+  &__button {
+    display: flex;
+    margin-top: 60px;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    & a {
+      display: inline-flex;
+      background: #4A99D3;
+      border-radius: 5px;
+      width: 180px;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+
+      & img {}
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
 
   &__google-play {}
 
   &__app-story {}
 
-  &__container-right {}
+  &__container-right {
+    display: flex;
+    width: 521px;
+    height: 534.78px;
+    position: relative;
+  }
 
-  &__container-right-bg {}
+  &__container-right-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-  &__container-right-img1 {}
+  &__container-right-img1 {
+    position: absolute;
+    left: 80px;
+    top: 74px;
+    display: flex;
+    z-index: 2;
+  }
 
-  &__container-right-img2 {}
+  &__container-right-img2 {
+    position: absolute;
+    display: flex;
+    left: 241px;
+    z-index: 1;
+  }
+}
+
+.ibg {
+  position: relative;
+}
+
+.bg-fon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 1440px;
+  height: 768px;
+  background: linear-gradient(1.02deg, #4A99D3 -17.33%, rgba(74, 153, 211, 0) 75.91%), #FFFFFF;
+  opacity: 0.2;
+  box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+  transform: rotate(-180deg);
+}
+
+/*
+!--------------------our-halp----------------------!
+*/
+.our-halp {
+  margin-top: 214px;
+
+  &__container {
+    & h2 {
+      font-family: 'Objective-Medium';
+      font-size: 36px;
+      line-height: 46px;
+      letter-spacing: 0.05em;
+      color: #260041;
+    }
+  }
+
+  &__menu {
+    margin-top: 84px;
+
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+
+      & li {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background: #FFFFFF;
+        padding: 0px 48px 48px 48px;
+        box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+        border-radius: 10px;
+
+        & h3 {
+          margin-top: 56px;
+        }
+
+        & p {
+          margin-top: 16px;
+          font-family: 'Objective-Regular';
+          font-size: 16px;
+          line-height: 26px;
+          color: #0F001A;
+          opacity: 0.6;
+        }
+
+        & a {
+          margin-top: 62px;
+          font-family: 'Objective-Medium';
+          font-size: 14px;
+          letter-spacing: 0.05em;
+          color: #4A99D3;
+          // border: 1px solid ;
+
+          & img {
+            margin-left: 15px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+!--------------------works----------------!
+*/
+.works {
+  display: flex;
+  margin-top: 90px;
+  background: rgba(74, 153, 211, 0.1);
+
+  &__container {
+    text-align: center;
+
+    & h2 {
+      margin-top: 95px;
+      font-family: 'Objective-Bolt';
+      font-size: 26px;
+      line-height: 27px;
+      text-align: center;
+      color: #4A99D3;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 95px;
+
+    & ul {
+      display: flex;
+      justify-content: center;
+      column-gap: 106px;
+      margin-top: 88px;
+
+      & li {
+        width: 257px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+
+        & h3 {
+          margin-top: 30px;
+          font-size: 18px;
+          line-height: 19px;
+          color: #0F001A;
+        }
+
+        & p {
+          font-family: 'Objective-Regular';
+          margin-top: 10px;
+          font-size: 16px;
+          line-height: 26px;
+          text-align: center;
+          color: #0F001A;
+        }
+      }
+    }
+  }
+}
+
+/*
+!----------------reviews---------------!
+*/
+.reviews {
+  margin-top: 87px;
+
+  &__container {
+    & h2 {
+      font-family: 'Objective-Bolt';
+      font-size: 26px;
+      line-height: 27px;
+      text-align: center;
+      color: #0F001A;
+    }
+  }
+
+  &__main {
+    margin-top: 11px;
+    display: flex;
+  }
+
+  &__main-left {
+    border: 1px solid;
+    flex: 0 0 46.42%;
+    text-align: center;
+
+    & img {}
+  }
+
+  .reviews__main-left-bg {
+    width: 100%;
+    height: 77.01%;
+    background: #0F001;
+    border-radius:
+  }
+
+  &__main-right {}
 }

@@ -3,7 +3,6 @@
 !----------------------- Обнуляющий стиль --------------------!
 */
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -79,11 +78,274 @@ h1, h2, h3, h4, h5, h6 {
 /*
 !---------------------- Подключения шрифта -------------------!
 */
+@font-face {
+  font-family: "Objective-Bolt";
+  src: url("/fonts/objective/Objective-Bold.otf");
+}
+@font-face {
+  font-family: "Objective-Medium";
+  src: url("/fonts/objective/Objective-Medium.otf");
+}
+@font-face {
+  font-family: "Objective-Regular";
+  src: url("/fonts/objective/Objective-Regular.otf");
+}
+@font-face {
+  font-family: "Philosopher-Regular";
+  src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+}
 /*
 !----------------------  -------------------!
 */
 body {
-  font-family: Montserrat;
-  font-weight: 500;
+  font-family: "Objective-Medium";
   font-size: 18px;
+  overflow-x: hidden;
+  background: #E5E5E5;
+}
+
+.u-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 46.52px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.header__menu ul {
+  display: flex;
+}
+.header__menu li:not(:last-child) {
+  margin-right: 50px;
+}
+
+main {
+  margin-top: 91px;
+}
+
+.main__container {
+  display: flex;
+  -moz-column-gap: 53px;
+       column-gap: 53px;
+  align-items: center;
+}
+.main__container-left {
+  flex: 53%;
+  margin-top: 11px;
+}
+.main__container-left h1 {
+  font-family: "Philosopher-Regular";
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 0.02em;
+  color: #260041;
+}
+.main__container-left h1 span {
+  color: #D81B60;
+}
+.main__container-left p {
+  font-family: "Objective-Regular";
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: #260041;
+}
+.main__button {
+  display: flex;
+  margin-top: 60px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.main__button a {
+  display: inline-flex;
+  background: #4A99D3;
+  border-radius: 5px;
+  width: 180px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.main__button:not(:last-child) {
+  margin-right: 20px;
+}
+.main__container-right {
+  display: flex;
+  width: 521px;
+  height: 534.78px;
+  position: relative;
+}
+.main__container-right-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main__container-right-img1 {
+  position: absolute;
+  left: 80px;
+  top: 74px;
+  display: flex;
+  z-index: 2;
+}
+.main__container-right-img2 {
+  position: absolute;
+  display: flex;
+  left: 241px;
+  z-index: 1;
+}
+
+.ibg {
+  position: relative;
+}
+
+.bg-fon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 1440px;
+  height: 768px;
+  background: linear-gradient(1.02deg, #4A99D3 -17.33%, rgba(74, 153, 211, 0) 75.91%), #FFFFFF;
+  opacity: 0.2;
+  box-shadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+  transform: rotate(-180deg);
+}
+
+/*
+!--------------------our-halp----------------------!
+*/
+.our-halp {
+  margin-top: 214px;
+}
+.our-halp__container h2 {
+  font-family: "Objective-Medium";
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  color: #260041;
+}
+.our-halp__menu {
+  margin-top: 84px;
+}
+.our-halp__menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.our-halp__menu ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: #FFFFFF;
+  padding: 0px 48px 48px 48px;
+  box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+  border-radius: 10px;
+}
+.our-halp__menu ul li h3 {
+  margin-top: 56px;
+}
+.our-halp__menu ul li p {
+  margin-top: 16px;
+  font-family: "Objective-Regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: #0F001A;
+  opacity: 0.6;
+}
+.our-halp__menu ul li a {
+  margin-top: 62px;
+  font-family: "Objective-Medium";
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #4A99D3;
+}
+.our-halp__menu ul li a img {
+  margin-left: 15px;
+}
+
+/*
+!--------------------works----------------!
+*/
+.works {
+  display: flex;
+  margin-top: 90px;
+  background: rgba(74, 153, 211, 0.1);
+}
+.works__container {
+  text-align: center;
+}
+.works__container h2 {
+  margin-top: 95px;
+  font-family: "Objective-Bolt";
+  font-size: 26px;
+  line-height: 27px;
+  text-align: center;
+  color: #4A99D3;
+}
+.works__menu {
+  margin-bottom: 95px;
+}
+.works__menu ul {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 106px;
+       column-gap: 106px;
+  margin-top: 88px;
+}
+.works__menu ul li {
+  width: 257px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.works__menu ul li h3 {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 19px;
+  color: #0F001A;
+}
+.works__menu ul li p {
+  font-family: "Objective-Regular";
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #0F001A;
+}
+
+/*
+!----------------reviews---------------!
+*/
+.reviews {
+  margin-top: 87px;
+}
+.reviews__container h2 {
+  font-family: "Objective-Bolt";
+  font-size: 26px;
+  line-height: 27px;
+  text-align: center;
+  color: #0F001A;
+}
+.reviews__main {
+  margin-top: 11px;
+  display: flex;
+}
+.reviews__main-left {
+  border: 1px solid;
+  flex: 0 0 46.42%;
+  text-align: center;
+}
+.reviews .reviews__main-left-bg {
+  width: 100%;
 }
