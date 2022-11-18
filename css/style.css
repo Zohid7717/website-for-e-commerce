@@ -101,7 +101,7 @@ body {
   font-family: "Objective-Medium";
   font-size: 18px;
   overflow-x: hidden;
-  background: #E5E5E5;
+  background: #edf4fa;
 }
 
 .u-container {
@@ -340,12 +340,195 @@ main {
 .reviews__main {
   margin-top: 11px;
   display: flex;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
 }
 .reviews__main-left {
-  border: 1px solid;
   flex: 0 0 46.42%;
-  text-align: center;
+  position: relative;
+}
+.reviews__main-left img {
+  margin-left: 10.42%;
 }
 .reviews .reviews__main-left-bg {
   width: 100%;
+  height: 77.01%;
+  background: rgba(74, 153, 211, 0.1);
+  position: absolute;
+  bottom: 0;
+}
+.reviews__main-right {
+  margin-top: 200px;
+}
+.reviews__main-right p {
+  margin-top: 40px;
+  font-family: "Objective-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #0F001A;
+  opacity: 0.5;
+}
+.reviews__main-right h5 {
+  margin-top: 40px;
+  font-family: "Objective-Medium";
+  font-size: 18px;
+  line-height: 19px;
+  color: #0F001A;
+}
+
+/*
+!-------------download---------------!
+*/
+.download {
+  margin-top: 158px;
+}
+.download__contsiner {
+  display: flex;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  height: 458.39px;
+  align-items: center;
+}
+.download__left {
+  display: flex;
+  flex: 0 0 43%;
+  position: relative;
+  height: 100%;
+}
+.download__img-1 {
+  position: absolute;
+  top: 57px;
+  left: 0;
+}
+.download__img-2 {
+  position: absolute;
+  top: 57px;
+  right: 0;
+}
+.download__img-3 {
+  position: absolute;
+  top: 0;
+  left: 138px;
+}
+.download__right {
+  display: flex;
+  flex-direction: column;
+}
+.download__right h3 {
+  font-family: "Objective-Bolt";
+  font-size: 25px;
+  line-height: 26px;
+  text-align: center;
+  color: #0F001A;
+}
+.download__right p {
+  margin-top: 15.58px;
+  font-family: "Objective-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #0F001A;
+  opacity: 0.5;
+}
+.download__buttom {
+  margin-top: 59.91px;
+  display: flex;
+  -moz-column-gap: 28.35px;
+       column-gap: 28.35px;
+  justify-content: center;
+}
+.download__g-play {
+  width: 165.45px;
+  height: 52.17px;
+  background: #000000;
+  padding: 9.13px 11.17px 8.56px 18.24px;
+  border-radius: 8px;
+}
+.download__a-store {
+  width: 165.45px;
+  height: 52.17px;
+  background: #000000;
+  padding: 9.13px 11.17px 8.56px 18.24px;
+  border-radius: 8px;
+}
+
+/*
+!-------------footer--------------!
+*/
+footer {
+  margin-top: 123.27px;
+  background: #4A99D3;
+}
+
+.footer__container {
+  display: flex;
+  padding: 56.29px 0px 28.66px 0px;
+}
+.footer__container p {
+  font-family: "Objective-Regular";
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+.footer__logo {
+  margin: 0px 144px 0px 0px;
+}
+.footer__menu {
+  margin-right: 79px;
+}
+.footer__menu-items {
+  display: flex;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+.footer__menu-item {
+  white-space: nowrap;
+  font-family: "Objective-Medium";
+  font-size: 18px;
+  line-height: 19px;
+  align-items: center;
+  color: #FFFFFF;
+}
+.footer__menu-item span {
+  text-decoration: underline;
+}
+.footer__menu-subitems {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.footer__menu-subitem a {
+  white-space: nowrap;
+  font-family: "Objective-Regular";
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+
+/*
+!-------------socials-------------!
+*/
+.footer__socials {
+  margin-top: 1px;
+  background-color: #4A99D3;
+  padding: 20px 0px 20px 0px;
+}
+
+.socials__container {
+  display: flex;
+  justify-content: space-between;
+}
+.socials__rights {
+  font-family: "Objective-Regular";
+  font-size: 10.41px;
+  line-height: 11px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.socials__menu ul {
+  display: flex;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
 }
